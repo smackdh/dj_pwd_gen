@@ -1,2 +1,13 @@
-<h1>Generate a Password!!!</h1>
-<p>{{ text }}</p>
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<link rel="stylesheet" href="{% static 'gen.css'%}" />
+	<head>
+		<title>Gen</title>
+	</head>
+	<body>
+		<h1>PWD Generator</h1>
+		<p>{{ text }}</p>
+	</body>
+</html>
