@@ -1,3 +1,5 @@
-container {
+.container {
   display:flex;
+  background-color: red;
+  color: white;
 }
