@@ -2,3 +2,4 @@ Django
 Black
 whitenoise
 djlint
+gunicorn
