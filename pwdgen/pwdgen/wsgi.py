@@ -1,7 +1,7 @@
 import os
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "pwdgen.pwdgen.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "pwdgen.settings")
 
 application = get_wsgi_application()
 app = application
