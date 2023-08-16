@@ -1,1 +1,1 @@
-web: gunicorn pwdgen.wsgi:application
+web: gunicorn pwdgen.wsgi:app
