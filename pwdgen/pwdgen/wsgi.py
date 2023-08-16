@@ -11,6 +11,6 @@ import os
 from django.core.wsgi import get_wsgi_application
 from pwdgen.settings import *
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "pwdgen.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "pwdgen.pwdgen.settings")
 
 application = get_wsgi_application()
