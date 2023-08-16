@@ -9,5 +9,5 @@
       }
 
       var passwordDisplay = document.getElementById("pwd");
-      passwordDisplay.innerHTML = randPwd;
+      passwordDisplay.innerText = randPwd;
     })
