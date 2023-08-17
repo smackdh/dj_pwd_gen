@@ -1,6 +1,8 @@
 var passwordDisplay = document.getElementById("pwd");
 var copyBtn = document.getElementById("copyBtn");
 var buttons = document.querySelectorAll(".myBtn");
+var symbolsCheckbox = document.querySelector("input[name=checkbox]");
+var includeSymbols = false
 
 function copyToClip(password) {
   navigator.clipboard.writeText(password)
@@ -11,7 +13,12 @@ buttons.forEach(function(button) {
     var buttonText = button.innerHTML;
     var pwdLength = parseInt(buttonText);
     var characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    var symbols = "!@#$%^&*()-_="
     var randPwd = '';
+
+    if (includeSymbols == true) {
+      characters += symbols;
+    }
 
     for (var i = 0; i < pwdLength; i++) {
       var randIndex = Math.floor(Math.random() * characters.length);
@@ -25,3 +32,11 @@ buttons.forEach(function(button) {
 copyBtn.addEventListener("click", function() {
   copyToClip(passwordDisplay.innerHTML)
 })
+
+symbolsCheckbox.addEventListener("change", function() {
+  if (this.checked) {
+    includeSymbols = true
+  } else {
+    includeSymbols = false
+  }
+});
