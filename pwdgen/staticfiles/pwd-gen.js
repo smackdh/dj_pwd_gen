@@ -20,6 +20,12 @@ buttons.forEach(function(button) {
       characters += symbols;
     }
 
+        // Ensure at least one symbol is included
+    if (includeSymbols === true) {
+      randPwd += symbols.charAt(Math.floor(Math.random() * symbols.length));
+      pwdLength--;
+    }
+
     for (var i = 0; i < pwdLength; i++) {
       var randIndex = Math.floor(Math.random() * characters.length);
       randPwd += characters.charAt(randIndex);
